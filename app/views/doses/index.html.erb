@@ -1,0 +1,18 @@
+
+<div style="margin-top: 90px">
+<h1>Doses from <%= @cocktail.name %></h1>
+<p>Find me in app/views/doses/index.html.erb</p>
+<ul>
+<% @doses.each do |dose|  %>
+  <li><%= dose.description %>   <%= dose.ingredient.name %>
+  <%#= link_to "Delete", doses_delete, data: {confirm: "Are You Sure?"} %>
+   <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+
+  </li>
+<% end  %>
+</ul>
+
+<%= link_to "Back to #{@cocktail.name}", cocktail_path(@cocktail) %>
+
+<%= link_to "Add a new Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-danger"%>
+</div>

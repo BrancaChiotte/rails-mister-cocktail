@@ -1,0 +1,12 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$gray: #F4F4F4;
+$spacer: 8px;
+
+body {
+background: $gray; // Using this variable
+}
+.btn {
+padding: $spacer ($spacer * 3);
+}
